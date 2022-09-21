@@ -34,7 +34,7 @@ public class UserMapper {
     public static User toUser(UpdateUserRequest req, int id) {
         User user = new User();
         user.setId(id);
-//        user.setFullname(req.getFullName());
+        user.setFullname(req.getFullName());
         user.setEmail(req.getEmail());
         user.setPhone(req.getPhone());
         String hash = BCrypt.hashpw(req.getPassword(), BCrypt.gensalt(12));

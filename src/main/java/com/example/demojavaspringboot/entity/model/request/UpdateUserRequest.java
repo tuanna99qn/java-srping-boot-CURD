@@ -16,7 +16,7 @@ import javax.validation.constraints.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UpdateUserRequest {
-    @NotNull(message = "Full name is required")
+//    @NotNull(message = "Full name is required")
     @NotEmpty(message = "Full name is required")
     @ApiModelProperty(
             example="Sam Smith",
@@ -24,9 +24,9 @@ public class UpdateUserRequest {
             required=true
     )
     @JsonProperty("fullName")
-    private String name;
+    private String fullName;
 
-    @NotNull(message = "Email is required")
+//    @NotNull(message = "Email is required")
     @NotEmpty(message = "Email is required")
     @Email(message = "Please provide a valid email")
     @ApiModelProperty(
@@ -36,7 +36,7 @@ public class UpdateUserRequest {
     )
     private String email;
 
-    @NotNull(message = "Password is required")
+//    @NotNull(message = "Password is required")
     @NotEmpty(message = "Password is required")
     @Size(min = 4, max = 20, message = "Pasword must be between 4 and 20 characters")
     @ApiModelProperty(
